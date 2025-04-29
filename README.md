@@ -15,8 +15,8 @@ _New to Git and GitHub? This free online course will get you up to speed quickly
   - [How our technology solution can help](#how-our-technology-solution-can-help)
   - [Our idea](#our-idea)
 - [Technology implementation](#technology-implementation)
-  - [IBM watsonx product(s) used](#ibm-ai-services-used)
-  - [Other IBM technology used](#other-ibm-technology-used)
+  - [Microsoft services used](#microsoft-services-used)
+  - [Other technology used](#other-technology-used)
   - [Solution architecture](#solution-architecture)
 - [Presentation materials](#presentation-materials)
   - [Solution demo video](#solution-demo-video)
@@ -34,35 +34,33 @@ _New to Git and GitHub? This free online course will get you up to speed quickly
 _INSTRUCTIONS: Below are the suggested sections to include in your README file to make sure your project is well documented. You can remove this instruction text._
 
 ## Project summary
-The summary is that we are addressing the fact that basic necessities like clean water and opportunities in education are not equally accessible to all people. We are tackling the challenge of  education by creating learning materials which could be accessed without the internet to marginalised communities. We are using watsonx to do things such as:
-Document analysis. We have  used watsonx.ai to extract key insights from courses in IBM SkillsBuild as well as IBM webinars and common questions and answers from a corpus of data related to resources or opportunities, and use that to better inform the local community.
-For any of the generative AI models built and implemented using watsonx.ai for the document we made, we utilised  watsonx.governance to monitor and govern the project’s  compliance in relation to copyright infringement. 
-We are  tackling clean water access by aiding water engineers with combining ESG reports from IBM software such as Maximo with  software such as IBM Cognos Analytics for easening analysis of drilling operations of water boreholes as well as water treatment in harsh environments such as  arid areas.
-We are using watsonx to do things such as:
-Event-based analysis. For example, you using  watsonx.ai to augment public data and weather data and assess the potential impacts of events, like climate disasters such as occurence of  floods and temperature levels by use of the Environmental Intelligence Suite and pollution by use scope emissions from the IBM Envizi.
-Conversation intelligence. With watsonx.ai, watsonx Assistant,watsonx.orchestrate  local community conversations such as salinity (amount of salt in water) can be synthesized into concise summaries by use of IBM Cognos analytics, identifying key elements for efficient, personalized follow-ups and next best actions. The next best actions are determined by water engineers who derive insights from vast amount of data with regard to contents of water as well as weather patterns.
+Public water management agencies face increasing pressure to deliver clean, safe and reliable water amid growing urban populations, aging infrastructure, environmental instability and limited operational budgets. Traditional water monitoring and infrastructure management systems are often fragmented, reactive, and labor-intensive, lacking the real-time visibility and automation necessary for modern utility challenges.
+Moreover, there are water engineers who are either visually impaired or due to age are partially  and have difficulty using software such as Microsoft Fabric due to limited vision
+
+
 
 ### The issue we are hoping to solve
-The first issue we are hoping to solve is that people who are affected by climate change  such as drought or floods lack finances to buy phones or even access the internet so as learn various information such as certification courses. Moreover, visually impaired people are significantly affected as they are unable to effectively learn. The second issue we seek to solve is that water engineers who either drill  water boreholes or engage in activities such as water purification have their operations affected by climate change. This could be due to carbon emissions from industries or high temperature which could affect drilling equipment for water boreholes.
+Issues being solved  include for water engineers:
+
+Inability to continuously monitor and respond to environmental threats such as seismic activity and temperature fluctuations.
+
+Limited visibility into internal water quality factors such as salinity, which affect treatment efficiency and public health.
+
+Poor inventory tracking of critical infrastructure such as pipelines, valves, and treatment units, leading to maintenance delays and asset loss.
+
+High dependence on manual processes for analysis, reporting, and application development, which reduces operational agility.
+
+Issue being solved for water engineers with limited vision who struggle to read most of the text that is placed on the software.
 
 ### How our technology solution can help
 Using generative AI to create updated and accessible  offline content.
 
 
 ### Our idea
-   The idea for quality education starts with gathering information from certification courses of IBM SkillsBuild, IBM website  and webinars from the IBM events website. 
-The first  step would be to use watsonx.ai to generate new text then use watsonx.governance to examine possibility of bias and copyright infringement. The second  step would be placing the generated content in  PowerPoint documents then sending them to people who could use them. Alternatively, the documents could be uploaded to the chat mode of the Watsonx. ai so as to ground responses based on the contents of the documents.
-We are also addressing the challenge of inequality by assisting the visually impaired to access online content more efficiently by use of plastic cards which function similar to braille  by using the lines and words engraved into plastic materials which illustrate content such as diagrams in the IBM SkillsBuild.
-We have placed powerpoint documents of the courses which we have made in the docs folder. We used Watsonx.ai to generate new text by either use of simple english or fine tuning the AI model to create new text based on career of person such as engineering or agriculture.
-The idea for clean water access also relies on the generated content from a course of titled Fundamentals of sustainability and Technology which outlines use of IBM ESG software such as Envizi.
-The first step would be to acquire  information obtained from using ESG software such as Maximo and the Environmental Intelligence Suite ,the information obtained could be details such as health score or numbers of failures.
-The information is then placed into excel documents by utilizing watsonx.ai and watsonx.orchestrate. 
-The Watsonx. ai is used to add relevant content in the Add knowledge section of the Watsonx. Orchestrate so as to ground the  AI model with detailed information to use for its responses. 
-The watsonx. Orchestrate is used automate the data entry process from information obtained from the  software such as Maximo and Environmental Intelligence Suite. This is accomplished by use of the AI assistant builder. 
-Finally, the excel document is then uploaded to the IBM Cognos analytics so as to derive insights. These insights could be utilized by a water engineer especially on factors that affect water purification such as carbon emissions.
-Moreover,  information derived from the Environmental Intelligence Suite concerning geospatial data outlines occurrences of  earthquakes  which significantly  aids in planning of drilling  operations of  water boreholes. 
-Information obtained from Maximo application suite such as probability of   failure once summarized by the IBM Cognos analytics could  be essential  in conducting efficient maintenance schedules as high temperature due to climate change often leads increased tendencies of thermal stress of drilling equipment.
-We have placed excel documents  we used for assessment in the docs secton which we uploaded into the IBM Cognos analytics.
+
+To address these problems, we have formulated an  AI- agent that unifies real-time monitoring, three-dimensional simulation, and agile application development. 
+We are using Microsoft Fabric and Microsoft Copilot together with data obtained from Internet of Things sensors that are placed in water infrastructure such as in pipes.
+So as to refine the data obtained from Internet of Things sensors we are using three-dimensional software such as NX software from Siemens and Autocard.
 
 
 
@@ -70,30 +68,95 @@ More detail is available in our [description document](./docs/DESCRIPTION.md).
 
 ## Technology implementation
 
-### IBM watsonx product(s) used
+### Microsoft services used
+Microsoft Copilot
+Microsoft Copilot empowers utility staff and engineers to create custom applications, automate tasks, and generate insights without deep technical expertise.
+Key Applications of Copilot in Water Management:
+Task Automation:
 
-_INSTRUCTIONS: Included here is a list of IBM watsonx products. Remove any products you did not use. Leave only those included in your solution code. In your official submission on the Call for Code Global Challenge web site, you are required to provide details on where and how you used each IBM watsonx product so judges can review your implementation. Remove these instructions._
+Automatically summarize incoming data from sensors or reports.
 
-**Featured watsonx products**
+Generate real-time incident response plans based on external environmental data.
 
-- [watsonx.ai](https://www.ibm.com/products/watsonx-ai) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- The watsonx.ai was used in the idea of quality education by generation of new text from information obtained from the IBM SkillsBuild.
-- The watsonx.ai was also used in the idea for clean water by prediction of weather patterns such as daily precipitation and providing recommendations on what action should be taken.
+Auto-generate email alerts, maintenance schedules, and compliance documentation.
 
-- [watsonx.governance](https://www.ibm.com/products/watsonx-governance) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- The watsonx.governance was used to detect levels or presence of copyright infringement from the generated content extracted from IBM SkillsBuild as well as information obtained from webinars and the IBM website.
+App Development:
 
-- [watsonx Assistant](https://cloud.ibm.com/catalog/services/watsonx-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+Use natural language to design low-code apps for field engineers to log equipment status or perform site inspections.
+
+Build user interfaces for asset tracking, predictive maintenance, or leak reporting with Copilot in Power Apps.
+
+Create chatbots for internal teams to quickly retrieve infrastructure data or environmental conditions.
+
+Integration with Fabric:
+
+Connect Copilot-developed apps to Fabric’s Lakehouse, Real-Time Analytics, or Power BI workspaces.
+
+Use AI to suggest data model improvements, KPI formulas, or visualization strategies.
+
+Microsoft Fabric 
+
+Leveraging Microsoft Fabric Event Analytics for Real-Time Monitoring and Management
+Microsoft Fabric provides a unified data platform that supports real-time analytics, large-scale data integration, and intelligent infrastructure monitoring through the following components:
+
+1. Real-Time Intelligence for External Environmental Monitoring
+Use Case:
+Monitor and react to seismic activities (via Richter scale) and temperature shifts that may affect pipeline integrity or water supply stability.
+
+Functionality:
+
+Real-Time Intelligence connects to sensor feeds via IoT Hub or Event Hub.
+
+Enables rule-based monitoring (such as ground motion exceeding threshold) with alerts.
+
+Supports visualization in Power BI for fast decision-making.
+
+Value:
+Improves disaster readiness and infrastructure risk awareness.
+
+2. Event Stream for Internal Condition Monitoring ( such as salinity)
+Use Case:
+Continuously analyze salinity levels within pipelines or reservoirs to ensure compliance and operational quality.
+
+Functionality:
+
+Event Stream captures real-time readings from internal water quality sensors.
+
+Performs transformations such as filtering, enrichment, and routing to Lakehouse for deep analytics.
+
+Enables triggers when thresholds are crossed.
+
+Value:
+Supports dynamic water treatment optimization and early anomaly detection.
+
+3. Dataflow Gen2 for Infrastructure Inventory Management
+Use Case:
+Maintain up-to-date records of pipes, fittings, and facility components across the water network.
+
+Functionality:
+
+Automates ingestion and transformation of asset data from spreadsheets, ERP systems, or operational logs.
+
+Cleans, enriches, and stores the inventory in a structured format ( such as  Lakehouse tables).
+
+Feeds Power BI dashboards with asset lifecycle, maintenance status, and risk factors.
+
+**Importance of software used**
+
+- [ Microsoft Copilot](https://copilot.microsoft.com/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- Empowers non-technical users to solve domain-specific problems, improves response times, and reduces reliance on IT backlogs.
+- 
+
+- [Microsoft Fabric]( https://www.microsoft.com/en-us/microsoft-fabric) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- Streamlines asset management and minimizes downtime due to untracked infrastructure.
+
+- [Azure AI Playground](https://cloud.ibm.com/catalog/services/watsonx-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - Watsonx assistant was integrated with watsonx.ai so as to provide a  simple way to perform an integration between a dialog flow and generative AI inferencing services in watsonx.ai.
 
 ### Other IBM technology used
 
 INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solution and describe how each component was used. If you can provide details on where these were used in your code, that would help the judges review your submission.
-
- IBM Maximo Application Suite was used to create and train an AI vision model and perform an automated quality inspection
- IBM Environmental Intelligence Suite was used to examine geospatial, weather  and climate data which are main factors that water engineers take into account when drilling boreholes.
- Cognos Analytics was used so as to formulate  AI-powered responses and insights from factors that could affect water access such as examining scope emission report from IBM Envizi so as determine possible level of carbon contamination of water.This insights could be used for making  data-driven decisions.
- 
+NX software fr
 **Additional IBM AI services (Remove any that you did not use)**
 
 - [Watson Machine Learning](https://cloud.ibm.com/catalog/services/watson-machine-learning) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
@@ -118,8 +181,8 @@ Diagram and step-by-step description of the flow of our solution:
 _INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
 
 ### Solution demo video
-### https://youtu.be/5fjDoKyZgPg
-[![Watch the video](https://youtu.be/5fjDoKyZgPg)
+### 
+[![Watch the video] 
 
 ### Project development roadmap
 
@@ -137,17 +200,14 @@ See below for our proposed schedule on next steps after Call for Code 2024 submi
 
 ## Additional details
 
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
+
 
 ### How to run the project
 
-INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
-The project is run by use of Watsonx.ai and Watsonx. governance, other areas where the solution could be deployed is in the Cognos analytics
+
 
 ### Live demo
-### https://youtu.be/6w7BLX28epY
-### https://youtu.be/kcxNWY_2WSs
-### https://youtu.be/knHht-Q9yNI
+
 
 You can find a running system to test at...
 
@@ -155,9 +215,7 @@ See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ---
 
-_INSTRUCTIONS: You can remove the below section from your specific project README._
 
-## About this template
 
 ### Contributing
 
@@ -170,7 +228,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ### Authors
 
 
-- ** John Maina** - _Initial work_ - [PurpleBooth](https://)
+- ** John Maina** - _Initial work_ - 
 
 ### License
 
@@ -178,4 +236,4 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 
 ### Acknowledgments
 
-- Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
+- Based on
