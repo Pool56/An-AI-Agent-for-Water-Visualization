@@ -1,14 +1,6 @@
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/solutions/projects/get-started/)
 
-_INSTRUCTIONS: This GitHub repository serves as a template and example you can use to create a well documented README for your project for the [2024 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/)._
 
-Your required deliverables and project descriptions should be officially submitted to your My Team > Submissions section of the [Call for Code Global Challenge web site](https://compete.callforcode.skillsnetwork.site/competitions/2024-call-for-code-global-challenge), but you can also optionally include them here for completeness, as it is good practice to clearly document your project in your README file. Replace the examples seen here with your own deliverable links.
-
-Use the **Use this template** button to create a new version of this repository and start entering content for your own Call for Code submission project. Make sure you have [registered for the 2024 Call for Code Global Challenge](https://www.ibm.com/account/reg/signup?formid=urx-52643) to access resources and full project submission instructions. Remove any "INSTRUCTIONS" sections when you are ready to submit your project.
-
-_New to Git and GitHub? This free online course will get you up to speed quickly: [Getting Started with Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github)_.
-
-# Replace this heading with your team/submission name
+# Table of contents for an AI agent for water visualization
 
 - [Project summary](#project-summary)
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
@@ -42,15 +34,15 @@ Moreover, there are water engineers who are either visually impaired or due to a
 ### The issue we are hoping to solve
 Issues being solved  include for water engineers:
 
-Inability to continuously monitor and respond to environmental threats such as seismic activity and temperature fluctuations.
+1. Inability to continuously monitor and respond to environmental threats such as seismic activity and temperature fluctuations.
 
-Limited visibility into internal water quality factors such as salinity, which affect treatment efficiency and public health.
+2. Limited visibility into internal water quality factors such as salinity, which affect treatment efficiency and public health.
 
-Poor inventory tracking of critical infrastructure such as pipelines, valves, and treatment units, leading to maintenance delays and asset loss.
+3. Poor inventory tracking of critical infrastructure such as pipelines, valves, and treatment units, leading to maintenance delays and asset loss.
 
-High dependence on manual processes for analysis, reporting, and application development, which reduces operational agility.
+4. High dependence on manual processes for analysis, reporting, and application development, which reduces operational agility.
 
-Issue being solved for water engineers with limited vision who struggle to read most of the text that is placed on the software.
+Another issue being solved for water engineers with limited vision who struggle to read most of the text that is placed on the software.
 
 ### How our technology solution can help
 Using generative AI to create updated and accessible  offline content.
@@ -58,7 +50,7 @@ Using generative AI to create updated and accessible  offline content.
 
 ### Our idea
 
-To address these problems, we have formulated an  AI- agent that unifies real-time monitoring, three-dimensional simulation, and agile application development. 
+To address these problems, we have formulated an  AI- agent that unifies real-time monitoring (through use of Microsoft Fabric), three-dimensional simulation and agile application development. 
 We are using Microsoft Fabric and Microsoft Copilot together with data obtained from Internet of Things sensors that are placed in water infrastructure such as in pipes.
 So as to refine the data obtained from Internet of Things sensors we are using three-dimensional software such as NX software from Siemens and Autocard.
 
