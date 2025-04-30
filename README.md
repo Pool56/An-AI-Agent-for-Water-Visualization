@@ -237,7 +237,8 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 ### Acknowledgments
 
 - Based on Microsoft websites of sustainability and Corporate Social Responsibility. Additionally courses from Microsoft from Microsoft Learn
-https://github.com/user-attachments/assets/b66ebdb0-6537-4f3d-9172-c364b416239c
+![image](https://github.com/user-attachments/assets/4c24676b-9061-46ca-a1b7-5939a6321e22)
+
 
 ![image](https://github.com/user-attachments/assets/60721a1d-e84a-412f-b72f-a6c7b3e43f6c)
 
