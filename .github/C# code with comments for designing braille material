@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Define a class to represent a Rectangle
+    public class Rectangle
+    {
+        public double Length { get; set; }
+        public double Width { get; set; }
+        public double BorderThickness { get; set; } // Thickness of the border lines around the rectangle
+
+        // Constructor
+        public Rectangle(double length, double width, double borderThickness)
+        {
+            Length = length;
+            Width = width;
+            BorderThickness = borderThickness;
+        }
+
+        // Calculate the total area including the border thickness
+        public double TotalArea()
+        {
+            double effectiveLength = Length + 2 * BorderThickness;
+            double effectiveWidth = Width + 2 * BorderThickness;
+            return effectiveLength * effectiveWidth;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Define the plastic material dimensions (length and width)
+        double plasticLength = 10.0; // in cm
+        double plasticWidth = 9.0;   // in cm
+
+        // Calculate the total area of the plastic material
+        double plasticArea = plasticLength * plasticWidth;
+
+        // Create a list to store the rectangles drawn
+        List<Rectangle> drawnRectangles = new List<Rectangle>();
+
+        // Define the rectangles to draw
+        drawnRectangles.Add(new Rectangle(1.5, 0.9, 0.05)); // Rectangle 1 with border thickness of 0.05 cm
+        drawnRectangles.Add(new Rectangle(1.1, 0.6, 0.05)); // Rectangle 2 with border thickness of 0.05 cm
+
+        // Initialize a variable to hold the total drawn area
+        double totalDrawnArea = 0.0;
+
+        // Sum up the areas of all rectangles including borders
+        foreach (var rect in drawnRectangles)
+        {
+            totalDrawnArea += rect.TotalArea();
+        }
+
+        // Calculate the remaining area
+        double remainingArea = plasticArea - totalDrawnArea;
+
+        // Output the results
+        Console.WriteLine($"Plastic Area: {plasticArea} cm²");
+        Console.WriteLine($"Total Drawn Area (including borders): {totalDrawnArea:F2} cm²");
+        Console.WriteLine($"Remaining Area: {remainingArea:F2} cm²");
+    }
+}
