@@ -1,0 +1,197 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Define a class to represent a Rectangle
+    public class Rectangle
+    {
+        public double Length { get; set; }
+        public double Width { get; set; }
+        public double BorderThickness { get; set; }
+
+        public int StartX { get; set; } // Starting X position on grid
+        public int StartY { get; set; } // Starting Y position on grid
+
+        // Constructor
+        public Rectangle(double length, double width, double borderThickness)
+        {
+            Length = length;
+            Width = width;
+            BorderThickness = borderThickness;
+        }
+
+        // Method to calculate area including border thickness
+        public double TotalArea()
+        {
+            double effectiveLength = Length + 2 * BorderThickness;
+            double effectiveWidth = Width + 2 * BorderThickness;
+            return effectiveLength * effectiveWidth;
+        }
+
+        // Effective size for drawing
+        public int EffectiveLength()
+        {
+            return (int)Math.Ceiling(Length + 2 * BorderThickness);
+        }
+
+        public int EffectiveWidth()
+        {
+            return (int)Math.Ceiling(Width + 2 * BorderThickness);
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Get plastic dimensions from user
+        Console.WriteLine("Enter the plastic length (cm):");
+        double plasticLength = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter the plastic width (cm):");
+        double plasticWidth = Convert.ToDouble(Console.ReadLine());
+
+        double plasticArea = plasticLength * plasticWidth;
+
+        // Create a "canvas" to draw (using integers for easier scaling)
+        int canvasLength = (int)Math.Ceiling(plasticLength);
+        int canvasWidth = (int)Math.Ceiling(plasticWidth);
+        char[,] canvas = new char[canvasWidth, canvasLength];
+
+        // Initialize canvas with dots representing empty plastic
+        for (int y = 0; y < canvasWidth; y++)
+        {
+            for (int x = 0; x < canvasLength; x++)
+            {
+                canvas[y, x] = '.';
+            }
+        }
+
+        // Ask user for number of rectangles
+        Console.WriteLine("Enter the number of rectangles to draw:");
+        int numberOfRectangles = Convert.ToInt32(Console.ReadLine());
+
+        List<Rectangle> drawnRectangles = new List<Rectangle>();
+        double totalDrawnArea = 0.0;
+        int currentX = 0, currentY = 0;
+
+        // Input rectangles
+        for (int i = 0; i < numberOfRectangles; i++)
+        {
+            Console.WriteLine($"\nRectangle {i + 1}:");
+
+            Console.Write("  Enter length (cm): ");
+            double length = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("  Enter width (cm): ");
+            double width = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("  Enter border thickness (cm): ");
+            double borderThickness = Convert.ToDouble(Console.ReadLine());
+
+            Rectangle newRect = new Rectangle(length, width, borderThickness);
+
+            double newTotalDrawnArea = totalDrawnArea + newRect.TotalArea();
+
+            if (newTotalDrawnArea > plasticArea)
+            {
+                Console.WriteLine("\n⚠️ Warning: Adding this rectangle would exceed the plastic area!");
+                Console.WriteLine("❌ Rectangle not added. Stopping input.");
+                break;
+            }
+
+            // Attempt to place rectangle
+            bool placed = false;
+
+            for (int y = 0; y <= canvasWidth - newRect.EffectiveWidth(); y++)
+            {
+                for (int x = 0; x <= canvasLength - newRect.EffectiveLength(); x++)
+                {
+                    if (CanPlace(canvas, x, y, newRect))
+                    {
+                        PlaceRectangle(canvas, x, y, newRect);
+                        newRect.StartX = x;
+                        newRect.StartY = y;
+                        placed = true;
+                        break;
+                    }
+                }
+                if (placed) break;
+            }
+
+            if (!placed)
+            {
+                Console.WriteLine("\n⚠️ Warning: No space to place this rectangle on the canvas!");
+                Console.WriteLine("❌ Rectangle not added.");
+                break;
+            }
+
+            drawnRectangles.Add(newRect);
+            totalDrawnArea = newTotalDrawnArea;
+        }
+
+        // Calculate remaining area
+        double remainingArea = plasticArea - totalDrawnArea;
+
+        // Display results
+        Console.WriteLine("\n===== Results =====");
+        Console.WriteLine($"Plastic Area: {plasticArea} cm²");
+        Console.WriteLine($"Total Drawn Area (including borders): {totalDrawnArea:F2} cm²");
+        Console.WriteLine($"Remaining Area: {remainingArea:F2} cm²");
+
+        // Show the drawn canvas
+        Console.WriteLine("\n===== Canvas =====");
+        PrintCanvas(canvas);
+
+        // Show rectangle details
+        Console.WriteLine("\nRectangles Drawn:");
+        for (int i = 0; i < drawnRectangles.Count; i++)
+        {
+            var rect = drawnRectangles[i];
+            Console.WriteLine($"- Rectangle {i + 1}: Length = {rect.Length} cm, Width = {rect.Width} cm, Border Thickness = {rect.BorderThickness} cm");
+        }
+    }
+
+    // Helper function to check if a rectangle can be placed
+    static bool CanPlace(char[,] canvas, int startX, int startY, Rectangle rect)
+    {
+        for (int y = startY; y < startY + rect.EffectiveWidth(); y++)
+        {
+            for (int x = startX; x < startX + rect.EffectiveLength(); x++)
+            {
+                if (canvas[y, x] != '.')
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    // Helper function to place a rectangle
+    static void PlaceRectangle(char[,] canvas, int startX, int startY, Rectangle rect)
+    {
+        for (int y = startY; y < startY + rect.EffectiveWidth(); y++)
+        {
+            for (int x = startX; x < startX + rect.EffectiveLength(); x++)
+            {
+                canvas[y, x] = '*';
+            }
+        }
+    }
+
+    // Helper function to print the canvas
+    static void PrintCanvas(char[,] canvas)
+    {
+        int rows = canvas.GetLength(0);
+        int cols = canvas.GetLength(1);
+
+        for (int y = 0; y < rows; y++)
+        {
+            for (int x = 0; x < cols; x++)
+            {
+                Console.Write(canvas[y, x]);
+            }
+            Console.WriteLine();
+        }
+    }
+}
