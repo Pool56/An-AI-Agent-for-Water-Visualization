@@ -1,0 +1,83 @@
+using System;
+
+class WaterDistributionMonitor
+{
+    // Thresholds (can be adjusted based on engineering standards)
+    const double PRESSURE_THRESHOLD = 80.0;      // psi
+    const double SALINITY_THRESHOLD = 15.0;      // PSU or equivalent
+    const double TEMP_THRESHOLD = 40.0;          // °C
+    const int EARTHQUAKE_THRESHOLD = 3;          // Richter scale
+    const double FORCE_THRESHOLD = 35.0;         // Newtons
+
+    static void Main()
+    {
+        // Simulated input data from Microsoft EventStream
+        double internalPressure = 85.0;       // psi
+        double salinity = 17.0;              // PSU
+        int numberOfPipes = 12;
+        double longitude = -0.03;
+        double latitude = 51.5;
+
+        // Data from Microsoft Real-Time Intelligence
+        double surfaceTemp = 45.0;           // °C
+        int earthquakeMagnitude = 4;         // Richter scale
+        double depth = 12.0;                 // metres
+
+        // From NX software (force on motor)
+        double motorForce = 39.0;            // Newtons
+
+        Console.WriteLine("=== WATER DISTRIBUTION STATUS ANALYSIS ===\n");
+
+        // Report internal factors
+        Console.WriteLine(">> Internal Factors:");
+        AnalyzeThreshold("Internal Pressure", internalPressure, PRESSURE_THRESHOLD, "psi");
+        AnalyzeThreshold("Salinity", salinity, SALINITY_THRESHOLD, "PSU");
+        Console.WriteLine($"Number of Pipes: {numberOfPipes}");
+        Console.WriteLine($"Location: Latitude {latitude}, Longitude {longitude}");
+
+        // Report external factors
+        Console.WriteLine("\n>> External Factors:");
+        AnalyzeThreshold("Ground Surface Temperature", surfaceTemp, TEMP_THRESHOLD, "°C");
+        AnalyzeThreshold("Earthquake Activity", earthquakeMagnitude, EARTHQUAKE_THRESHOLD, "Richter scale");
+        Console.WriteLine($"Monitoring Depth: {depth} metres");
+
+        // Equipment stress
+        Console.WriteLine("\n>> Equipment Monitoring:");
+        AnalyzeThreshold("Motor Force Output", motorForce, FORCE_THRESHOLD, "Newtons");
+
+        // Engineer notification logic
+        Console.WriteLine("\n>> Engineer Notification Summary:");
+
+        if (internalPressure > PRESSURE_THRESHOLD || 
+            salinity > SALINITY_THRESHOLD ||
+            surfaceTemp > TEMP_THRESHOLD || 
+            earthquakeMagnitude > EARTHQUAKE_THRESHOLD || 
+            motorForce > FORCE_THRESHOLD)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(" ALERT: One or more thresholds have been exceeded!");
+            Console.ResetColor();
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(" All systems operating within normal thresholds.");
+            Console.ResetColor();
+        }
+    }
+
+    static void AnalyzeThreshold(string parameterName, double value, double threshold, string unit)
+    {
+        if (value > threshold)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"[ALERT] {parameterName}: {value} {unit} (Threshold: {threshold} {unit})");
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{parameterName}: {value} {unit} (OK)");
+        }
+        Console.ResetColor();
+    }
+}
