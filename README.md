@@ -194,8 +194,7 @@ The project currently does the following things.
 
 In the future we plan to use watsonx. data  for data management and other IBM technologies such as watson discover for intelligent document processing 
 
-See below for our proposed schedule on next steps after Call for Code 2024 submission.
-### https://drive.google.com/file/d/1tV-6Blomms2woXUWXRhw3Q3s8BatA8xW/view?usp=sharing
+
 ![Roadmap]()
 
 ## Additional details
@@ -237,6 +236,7 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 ### Acknowledgments
 
 - Based on Microsoft websites of sustainability and Corporate Social Responsibility. Additionally courses from Microsoft from Microsoft Learn
+  
 ![image](https://github.com/user-attachments/assets/4c24676b-9061-46ca-a1b7-5939a6321e22)
 
 
