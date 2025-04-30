@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Class to represent a rectangle with a name and dimensions
+    class NamedRectangle
+    {
+        public string Name { get; set; }
+        public double Length { get; set; }
+        public double Width { get; set; }
+
+        public NamedRectangle(string name, double length, double width)
+        {
+            Name = name;
+            Length = length;
+            Width = width;
+        }
+
+        public double Area()
+        {
+            return Length * Width;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Plastic rectangle dimensions
+        double plasticLength = 14.0; // cm
+        double plasticWidth = 6.0;   // cm
+        double plasticArea = plasticLength * plasticWidth;
+
+        Console.WriteLine("Plastic Material Area: " + plasticArea + " cm²\n");
+
+        // Define list of named rectangles
+        List<NamedRectangle> rectangles = new List<NamedRectangle>
+        {
+            new NamedRectangle("Home", 1.4, 0.5),
+            new NamedRectangle("Create", 1.2, 0.7),
+            new NamedRectangle("Browse", 1.7, 1.1),
+            new NamedRectangle("OneLake", 1.4, 0.9),
+            new NamedRectangle("Monitor", 1.2, 0.7)
+        };
+
+        // Calculate total area of rectangles
+        double totalRectanglesArea = 0.0;
+        foreach (var rect in rectangles)
+        {
+            double area = rect.Area();
+            totalRectanglesArea += area;
+            Console.WriteLine($"{rect.Name} Rectangle: {rect.Length} × {rect.Width} = {area} cm²");
+        }
+
+        // Calculate remaining area
+        double remainingArea = plasticArea - totalRectanglesArea;
+
+        Console.WriteLine("\nTotal Area Used by Rectangles: " + totalRectanglesArea + " cm²");
+        Console.WriteLine("Remaining Area in Plastic: " + Math.Round(remainingArea, 2) + " cm²");
+    }
+}
