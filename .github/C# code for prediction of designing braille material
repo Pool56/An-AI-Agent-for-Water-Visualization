@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Define a class to represent a Rectangle
+    public class Rectangle
+    {
+        public double Length { get; set; }
+        public double Width { get; set; }
+        public double BorderThickness { get; set; }
+
+        // Constructor
+        public Rectangle(double length, double width, double borderThickness)
+        {
+            Length = length;
+            Width = width;
+            BorderThickness = borderThickness;
+        }
+
+        // Method to calculate area including border thickness
+        public double TotalArea()
+        {
+            double effectiveLength = Length + 2 * BorderThickness;
+            double effectiveWidth = Width + 2 * BorderThickness;
+            return effectiveLength * effectiveWidth;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Get plastic dimensions from user
+        Console.WriteLine("Enter the plastic length (cm):");
+        double plasticLength = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Enter the plastic width (cm):");
+        double plasticWidth = Convert.ToDouble(Console.ReadLine());
+
+        double plasticArea = plasticLength * plasticWidth;
+
+        // Ask user for number of rectangles
+        Console.WriteLine("Enter the number of rectangles to draw:");
+        int numberOfRectangles = Convert.ToInt32(Console.ReadLine());
+
+        List<Rectangle> drawnRectangles = new List<Rectangle>();
+
+        double totalDrawnArea = 0.0;
+
+        // Input rectangles one by one
+        for (int i = 0; i < numberOfRectangles; i++)
+        {
+            Console.WriteLine($"\nRectangle {i + 1}:");
+
+            Console.Write("  Enter length (cm): ");
+            double length = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("  Enter width (cm): ");
+            double width = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("  Enter border thickness (cm): ");
+            double borderThickness = Convert.ToDouble(Console.ReadLine());
+
+            // Create a new rectangle
+            Rectangle newRect = new Rectangle(length, width, borderThickness);
+
+            // Check if adding this rectangle will overflow
+            double newTotalDrawnArea = totalDrawnArea + newRect.TotalArea();
+
+            if (newTotalDrawnArea > plasticArea)
+            {
+                Console.WriteLine("\n Warning: Adding this rectangle would exceed the plastic area!");
+                Console.WriteLine(" Rectangle not added. Stopping input.");
+                break; // Stop adding more rectangles
+            }
+            else
+            {
+                drawnRectangles.Add(newRect);
+                totalDrawnArea = newTotalDrawnArea;
+            }
+        }
+
+        // Calculate remaining area
+        double remainingArea = plasticArea - totalDrawnArea;
+
+        // Display results
+        Console.WriteLine("\n===== Results =====");
+        Console.WriteLine($"Plastic Area: {plasticArea} cm²");
+        Console.WriteLine($"Total Drawn Area (including borders): {totalDrawnArea:F2} cm²");
+        Console.WriteLine($"Remaining Area: {remainingArea:F2} cm²");
+
+        // Optional: Show rectangles drawn
+        Console.WriteLine("\nRectangles Drawn:");
+        for (int i = 0; i < drawnRectangles.Count; i++)
+        {
+            var rect = drawnRectangles[i];
+            Console.WriteLine($"- Rectangle {i + 1}: Length = {rect.Length} cm, Width = {rect.Width} cm, Border Thickness = {rect.BorderThickness} cm");
+        }
+    }
+}
