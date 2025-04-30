@@ -45,7 +45,9 @@ Issues being solved  include for water engineers:
 Another issue being solved for water engineers with limited vision who struggle to read most of the text that is placed on the software.
 
 ### How our technology solution can help
-Using generative AI to create updated and accessible  offline content.
+Our technology helps water engineers to effectively evaluate factors that could undermine performance of infrastructure used in a water industry.
+
+Moreover, our solution ensures that the visually impaired are able to access software such as Microsoft Copilot or Microsoft Fabric  through use of plastic braille material.  
 
 
 ### Our idea
@@ -142,27 +144,33 @@ Feeds Power BI dashboards with asset lifecycle, maintenance status, and risk fac
 - [Microsoft Fabric]( https://www.microsoft.com/en-us/microsoft-fabric) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - Streamlines asset management and minimizes downtime due to untracked infrastructure.
 
-- [Azure AI Playground](https://cloud.ibm.com/catalog/services/watsonx-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [Azure AI Playground](https://microsoft.github.io/azure-openai-service-proxy/playground/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - Watsonx assistant was integrated with watsonx.ai so as to provide a  simple way to perform an integration between a dialog flow and generative AI inferencing services in watsonx.ai.
 
-### Other IBM technology used
+- 
 
-INSTRUCTIONS: List any other IBM technology or IBM AI services used in your solution and describe how each component was used. If you can provide details on where these were used in your code, that would help the judges review your submission.
-NX software fr
-**Additional IBM AI services (Remove any that you did not use)**
+### Other non-Microsoft technologies used
 
-- [Watson Machine Learning](https://cloud.ibm.com/catalog/services/watson-machine-learning) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- [NX software](https://plm.sw.siemens.com/en-US/nx/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 Watson Machine learning  was an associated service when using the watsonx. ai
-- [Watson Studio](https://cloud.ibm.com/catalog/services/watson-studio) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+
+- [AutoCAD](https://en.wikipedia.org/wiki/AutoCAD) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - Watson studio was accessible by use of the cloud pak for data, i used it in my solution by using templates provided in the cloud pak for data. Additionally I created a learning material which contained application of the use of Watson Studio from the IBM SkillsBuild. The title of the course was Clean, Refine and Visualize Data with IBM Watson Studio
 
 ### Solution architecture
-
-REPLACE THIS EXAMPLE WITH YOUR OWN, OR REMOVE THIS EXAMPLE
-
 Diagram and step-by-step description of the flow of our solution:
 
-### https://drive.google.com/file/d/1Ff-k1DKO8jjKHtkYlCwAdCSM6iH-WtKo/view?usp=sharing
+![image](https://github.com/user-attachments/assets/b1c9e62d-30dd-4592-955d-c3a9b759f470)
+
+
+Solution for water engineers to get real time  insights for infrastructure such  
+as pipes
+![image](https://github.com/user-attachments/assets/232b60b3-f202-4340-bba0-e33c5c16d7cf)
+
+Solution for water engineers  who are fully visually impaired or partially impaired
+![image](https://github.com/user-attachments/assets/c3800ca8-45f3-4614-98d4-b4ded6e2902a)
+
+
 
 ![Video transcription/translaftion app]( )
 
@@ -228,4 +236,12 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 
 ### Acknowledgments
 
-- Based on
+- Based on Microsoft websites of sustainability and Corporate Social Responsibility. Additionally courses from Microsoft from Microsoft Learn
+![image](https://github.com/user-attachments/assets/b66ebdb0-6537-4f3d-9172-c364b416239c)
+
+![image](https://github.com/user-attachments/assets/60721a1d-e84a-412f-b72f-a6c7b3e43f6c)
+
+![image](https://github.com/user-attachments/assets/986956ef-372b-427c-a0c8-306b7108d607)
+
+
+
