@@ -34,18 +34,19 @@ Moreover, there are water engineers who are either visually impaired or due to a
 ### The issue we are hoping to solve
 Issues being solved  include for water engineers:
 
-1. Inability to continuously monitor and respond to environmental threats such as seismic activity and temperature fluctuations.
+1. Inability to continuously monitor and respond to environmental threats such as earth quakes (seismic activity which could damage water pipes that are located underground)  and temperature fluctuations such as intense heat which abnormally raises water temeperature and even destroys electrical components.
 
 2. Limited visibility into internal water quality factors such as salinity, which affect treatment efficiency and public health.
 
 3. Poor inventory tracking of critical infrastructure such as pipelines, valves, and treatment units, leading to maintenance delays and asset loss.
 
-4. High dependence on manual processes for analysis, reporting, and application development, which reduces operational agility.
+4. High dependence on manual processes for analysis, which reduces operational agility.
 
 Another issue being solved for water engineers with limited vision who struggle to read most of the text that is placed on the software.
 
 ### How our technology solution can help
 Our technology helps water engineers to effectively evaluate factors that could undermine performance of infrastructure used in a water industry.
+The objective is using IoT sensors together with software that could report current information to water engineers. The goal is to use real-time data so as to effectively analyse the currrent status of equipment used for water distribution. 
 
 Moreover, our solution ensures that the visually impaired are able to access software such as Microsoft Copilot or Microsoft Fabric  through use of plastic braille material.  
 
@@ -62,7 +63,7 @@ So as to refine the data obtained from Internet of Things sensors we are using t
 ## Technology implementation
 
 ### Microsoft services used
-Microsoft Copilot
+# Microsoft Copilot
 Microsoft Copilot empowers utility staff and engineers to create custom applications, automate tasks, and generate insights without deep technical expertise.
 Key Applications of Copilot in Water Management:
 Task Automation:
@@ -87,7 +88,7 @@ Connect Copilot-developed apps to Fabric’s Lakehouse, Real-Time Analytics, or 
 
 Use AI to suggest data model improvements, KPI formulas, or visualization strategies.
 
-Microsoft Fabric 
+# Microsoft Fabric 
 
 Leveraging Microsoft Fabric Event Analytics for Real-Time Monitoring and Management
 Microsoft Fabric provides a unified data platform that supports real-time analytics, large-scale data integration, and intelligent infrastructure monitoring through the following components:
@@ -146,8 +147,10 @@ Feeds Power BI dashboards with asset lifecycle, maintenance status, and risk fac
 
 - [Azure AI Playground](https://microsoft.github.io/azure-openai-service-proxy/playground/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - The Azure AI playground was used as an alternative for performing computations for analysis of mechanical components of pumps as well as designing of braille material.
+- Below  are videos illustrating how Azure AI playground was used;
 - https://youtu.be/YaWbm4kgBLE
 - https://youtu.be/Q4NB53KcXyw
+- Below are drive documents that documents how Azure AI playground
 - https://drive.google.com/file/d/1KiEtQ_rS3asNua6qjxeVET7DrvpQ7Qjo/view?usp=sharing
 - https://drive.google.com/file/d/1PGbdhzFXoV2jKtFQ-FE5Kc5G22gBJLKe/view?usp=sharing
 - https://docs.google.com/document/d/1dUcu80sCvpVxI0mM4A6t4p5i_fw-G-wl/edit?usp=sharing&ouid=115192565142409982962&rtpof=true&sd=true
@@ -156,10 +159,12 @@ Feeds Power BI dashboards with asset lifecycle, maintenance status, and risk fac
 ### Other non-Microsoft technologies used
 
 - [NX software](https://plm.sw.siemens.com/en-US/nx/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
+- NX software is used for three- dimensional simulation of aspects such as force which it is able to offer information of how the different  structures are impacted by factors such as temperature.
+- It is used in the solution by placing the analytical information into Microsoft Copilot which provides more detailed data which could aid water engineers to make accurate decisions
 
 
 - [AutoCAD](https://en.wikipedia.org/wiki/AutoCAD) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- Was used in the design of braille material
+- Was used in the design of braille material, for this solution AutoCAD guided us in determining dimensions to use for construction of Braille material
 
 ### Solution architecture
 Diagram and step-by-step description of the flow of our solution:
@@ -179,20 +184,12 @@ Solution for water engineers  who are fully visually impaired or partially impai
 
 
 
-
-
-
-![Video transcription/translaftion app]( )
-
-
-
 ## Presentation materials
 
-_INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
+https://docs.google.com/presentation/d/1w21sWLBfeAatAISrgv7epF6ibtaqZ4i4/edit?usp=sharing&ouid=101103218955394927682&rtpof=true&sd=true
 
 ### Solution demo video
-### 
-[![Watch the video] 
+
 
 ### Project development roadmap
 
@@ -201,23 +198,20 @@ The project currently does the following things.
 In the future we plan to use other Microsoft software such as Github for Copilot
 
 
-![Roadmap]()
-
 ## Additional details
 
 
 
 ### How to run the project
 
-
+The project is run by use of Microsoft Copilot
 
 ### Live demo
+You can find a running system to test at...
 
 https://copilotstudio.microsoft.com/environments/Default-6e2cc058-79af-4df8-92e6-ee6e0d1dea3e/bots/crf8a_dataVisualizerForWaterEngineers/canvas?__version__=2&enableFileAttachment=true
 
-You can find a running system to test at...
 
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
 
 ---
 
@@ -229,7 +223,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+The version is based on use of Microsoft Copilot together with  other Microsoft services such as Microsoft Fabric
 
 ### Authors
 
@@ -242,7 +236,10 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 
 ### Acknowledgments
 
-- Based on Microsoft websites of sustainability and Corporate Social Responsibility. Additionally courses from Microsoft from Microsoft Learn
+-  I would seek to acknowledge where we referenced our project based on Microsoft websites of sustainability with regard to water positive  as well as the global diversity and inclusion report of the year 2024. Additionally courses from Microsoft from Microsoft Learn. The information outlined from both the website and courses were  what inspired us.
+-  https://learn.microsoft.com/en-us/collections/7wyni8tnojw5xq?ref=collection&listId=8wy3iztmn7j2p5&sharingId=6A9F03F25E12DA9E  (AI Skills Fest Challenge: AI for Public Sector Upskilling)
+-  https://blogs.microsoft.com/on-the-issues/2019/03/22/on-world-water-day-microsoft-is-delivering-new-approaches-to-ensure-we-leave-no-one-behind/
+-  https://www.microsoft.com/en-us/diversity/inside-microsoft/annual-report
   
 ![image](https://github.com/user-attachments/assets/4c24676b-9061-46ca-a1b7-5939a6321e22)
 
