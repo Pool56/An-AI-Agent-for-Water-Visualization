@@ -23,7 +23,7 @@
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
-_INSTRUCTIONS: Below are the suggested sections to include in your README file to make sure your project is well documented. You can remove this instruction text._
+
 
 ## Project summary
 Public water management agencies face increasing pressure to deliver clean, safe and reliable water amid growing urban populations, aging infrastructure, environmental instability and limited operational budgets. Traditional water monitoring and infrastructure management systems are often fragmented, reactive, and labor-intensive, lacking the real-time visibility and automation necessary for modern utility challenges.
@@ -58,7 +58,6 @@ So as to refine the data obtained from Internet of Things sensors we are using t
 
 
 
-More detail is available in our [description document](./docs/DESCRIPTION.md).
 
 ## Technology implementation
 
@@ -138,24 +137,29 @@ Feeds Power BI dashboards with asset lifecycle, maintenance status, and risk fac
 **Importance of software used**
 
 - [ Microsoft Copilot](https://copilot.microsoft.com/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- Empowers non-technical users to solve domain-specific problems, improves response times, and reduces reliance on IT backlogs.
-- 
+-  Microsoft Copilot was used to create AI agents which function as  assistants especially the agent where an activity map was used to examine accuracy of responses.
+-  Microsoft Copilot was  used to generate code by use of C# programming language
+- Microsoft Copilot was also used to automate tasks by use of flows which a sequence of actions were triggered based on certain conditions
 
 - [Microsoft Fabric]( https://www.microsoft.com/en-us/microsoft-fabric) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
 - Streamlines asset management and minimizes downtime due to untracked infrastructure.
 
 - [Azure AI Playground](https://microsoft.github.io/azure-openai-service-proxy/playground/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- Watsonx assistant was integrated with watsonx.ai so as to provide a  simple way to perform an integration between a dialog flow and generative AI inferencing services in watsonx.ai.
-
-- 
+- The Azure AI playground was used as an alternative for performing computations for analysis of mechanical components of pumps as well as designing of braille material.
+- https://youtu.be/YaWbm4kgBLE
+- https://youtu.be/Q4NB53KcXyw
+- https://drive.google.com/file/d/1KiEtQ_rS3asNua6qjxeVET7DrvpQ7Qjo/view?usp=sharing
+- https://drive.google.com/file/d/1PGbdhzFXoV2jKtFQ-FE5Kc5G22gBJLKe/view?usp=sharing
+- https://docs.google.com/document/d/1dUcu80sCvpVxI0mM4A6t4p5i_fw-G-wl/edit?usp=sharing&ouid=115192565142409982962&rtpof=true&sd=true
+  
 
 ### Other non-Microsoft technologies used
 
 - [NX software](https://plm.sw.siemens.com/en-US/nx/) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-Watson Machine learning  was an associated service when using the watsonx. ai
+
 
 - [AutoCAD](https://en.wikipedia.org/wiki/AutoCAD) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- Watson studio was accessible by use of the cloud pak for data, i used it in my solution by using templates provided in the cloud pak for data. Additionally I created a learning material which contained application of the use of Watson Studio from the IBM SkillsBuild. The title of the course was Clean, Refine and Visualize Data with IBM Watson Studio
+- Was used in the design of braille material
 
 ### Solution architecture
 Diagram and step-by-step description of the flow of our solution:
@@ -193,11 +197,7 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 The project currently does the following things.
 
-- Feature 1. Use of watsonx.ai for generation of new content and use watsonx.governance for examining coppyright infringement
-- Feature 2. Use of watsonx.ai ( for prediction and creation of responses from data obtained from Maximo Application Suite , Environmental Intelligence Suite and Envizi) and watsonx. orchestrate (automation of repetitive tasks). The results are placed into the IBM Cognos Analyics for deriving further data insights 
-
-
-In the future we plan to use watsonx. data  for data management and other IBM technologies such as watson discover for intelligent document processing 
+In the future we plan to use other Microsoft software such as Github for Copilot
 
 
 ![Roadmap]()
@@ -212,6 +212,7 @@ In the future we plan to use watsonx. data  for data management and other IBM te
 
 ### Live demo
 
+https://copilotstudio.microsoft.com/environments/Default-6e2cc058-79af-4df8-92e6-ee6e0d1dea3e/bots/crf8a_dataVisualizerForWaterEngineers/canvas?__version__=2&enableFileAttachment=true
 
 You can find a running system to test at...
 
