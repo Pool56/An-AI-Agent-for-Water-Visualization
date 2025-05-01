@@ -169,15 +169,16 @@ Diagram and step-by-step description of the flow of our solution:
 
 Solution for water engineers to get real time  insights for infrastructure such  
 as pipes
+
 ![image](https://github.com/user-attachments/assets/0fbe0aa5-d132-491f-b438-b4f587d5b500)
 
-![image](https://github.com/user-attachments/assets/232b60b3-f202-4340-bba0-e33c5c16d7cf)
+
 
 Solution for water engineers  who are fully visually impaired or partially impaired
 ![image](https://github.com/user-attachments/assets/f727fc07-8633-4137-b0e8-7bc41ad1c73d)
 
 
-![image](https://github.com/user-attachments/assets/c3800ca8-45f3-4614-98d4-b4ded6e2902a)
+
 
 
 
